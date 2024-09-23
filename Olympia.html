@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<!---Basic head content-charset, CSS link, javascript source, and page title-->
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="FormValidate.js"></script>
+    <title>Olympia, Washington</title>
+</head>
+<body>
+<!---Large header displaying city name-->
+    <header id="city">Olympia</header>
+<!---Navigation Bar-->
+    <nav id="navbar">
+        <a href="index.html" class="navitem">Home</a> |
+        <a href="Olympia.html" class="navitem">Olympia</a> |
+        <a href="Seattle.html" class="navitem">Seattle</a> |
+        <a href="Spokane.html" class="navitem">Spokane</a>
+    </nav>
+<!---Main section with and ordered list of info about the city-->
+    <div id="container">
+        <section id="info">
+            <h1>5 Facts About the City</h1>
+            <ol class="list">
+                <li>The population of Olympia, WA is 55,669.</li>
+                <li>Olympia was incorperated in 1859.</li>
+                <li>Olympia is located at the base of the Olympic Peninsula, west of the cascade mountians.</li>
+                <li>Olympia is considered a suburban city.</li>
+                <li>Average income for this city is roughly 65,000 a year.</li>
+            </ol>
+        <br/>
+<!---Photo of Olympia-->
+        <img src="Olympia.jpg" alt="Olympia,WA">
+    </section>
+<!---Aside section-->
+    <aside id="side">
+        <h1>More about these great places!</h1>
+<!---An unordered list of links to the official government websites of the cities-->
+        <ul class="list">
+            <li><a href="https://wa.gov/" target="_blank">Washington</a></li>
+            <br/>
+            <li><a href="https://www.olympiawa.gov/" target="_blank">Olympia</a></li>
+            <br/>
+            <li><a href="https://www.seattle.gov/" target="_blank">Seattle</a></li>
+            <br/>
+            <li><a href="https://my.spokanecity.org/" target="_blank">Spokane</a></li>
+        </ul>
+        <br/>
+<!---Input form structed in a 5x3 table. First name, last name, email, email verification, and message box.-->
+        <form class="form" id="form">
+            <h2>Questions or comments?</h2>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>&#9672;</td>
+                        <td><label for="name">First Name</label></td>
+                        <td><input type="text" id="name" name="firstname" placeholder="John"></td>
+                    </tr>
+                    <tr>
+                        <td>&#9672;</td>
+                        <td><label for="name">Last Name</label></td>
+                        <td><input type="text" id="name" name="lastname" placeholder="Doe"></td>
+                    </tr>
+                    <tr>
+                        <td>&#9672;</td>
+                        <td><label for="email">Email</label></td>
+                        <td><input type="email" id="email" name="email" placeholder="johndoe@email.com"></td>
+                    </tr>
+                    <tr>
+                        <td>&#9672;</td>
+                        <td><label for="email">Confirm email</label></td>
+                        <td><input type="email" id="emailConf" name="emailConf" placeholder="johndoe@email.com"></td>
+                    </tr>
+                    <tr>
+                        <td>&#9672;</td>
+                        <td><label for="message">Message</label></td>
+                        <td><textarea id="message" name="message" placeholder="Speak your mind!"></textarea></td>
+                    </tr>
+                </tbody>
+            </table>
+            <br/>
+            <input onclick="validateForm()" type="submit" value="Submit">
+        </form>
+    </aside>
+    </div>
+<!---Photo source in footer-->
+    <footer><a href="https://www.istockphoto.com/photo/drone-shot-of-olympia-washington-at-sunset-gm1332233430-415139716?searchscope=image%2Cfilm" target="_blank">Image</a>
+    </footer>
+<!---Javascript for email verification-->
+    <script>
+        //EMAIL VERIFICATION
+
+        function validateForm(){
+    
+            let x = document.getElementById("email").value;
+            let y = document.getElementById("emailConf").value;
+
+            if(x === y){
+                alert("Values matched");
+            }
+            else{
+                alert("Values not matching");
+                return false;
+            }
+
+        }
+    </script>
+</body>
+</html>
