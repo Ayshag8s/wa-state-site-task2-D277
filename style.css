@@ -82,6 +82,11 @@ header {
     position: relative;
 }
 
+img{
+    width: 650px;
+    height: 325px;
+}
+
 /*For various titles in both section and side bar*/
 h1, h2{
     font-family: "Harlow", "Arial", sans-serif;
@@ -107,12 +112,16 @@ h1, h2{
 
 /*aside bar- message input form */
 .form{
-    float: right;
+    margin-top: 30px;
     font-family: "Arial", sans-serif;
     font-weight: bold;
     text-decoration: underline;
     text-align: center;
     
+}
+
+table{
+    padding-left: 20px;
 }
 
 td{
@@ -180,13 +189,18 @@ img.displaySlide{
     border: 2px solid;
     border-radius: 15px;
     border-color: black;
-    margin-top: 15px;
+    margin: 15px;
     padding: 1px 10px;
     background-color: #4e95d9;
     font-family: "Arial", sans-serif;
     font-weight: bold;
     font-size: 20px;
     cursor: pointer;
+}
+
+.prev:hover, .next:hover{
+    background-color: #7ab1e4;
+}
 }
 
 .prev:hover, .next:hover{
